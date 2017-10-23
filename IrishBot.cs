@@ -32,9 +32,12 @@ namespace BattleshipBot
 
         private IGridSquare GetNextTarget()
         {
+            Random rnd = new Random();
             if (lastTarget == null)
             {
-                return new GridSquare('A', 1);
+                int targetColumn = rnd.Next(1,10);
+                char targetRow = ShipStart.GetRandomChar("ABCDEFGHIJ", 0);
+                return new GridSquare(targetRow,targetColumn);
             }
 
             var row = lastTarget.Row;
