@@ -14,14 +14,14 @@ namespace BattleshipBot
             lastTarget = null; // Forget all our history when we start a new game
             return new List<IShipPosition>
       {
-               ShipSize.GetShipPositionForShipOfSize(5,10), //Aircraft Carrier
-               ShipSize.GetShipPositionForShipOfSize(4,10), //Battleship
-               ShipSize.GetShipPositionForShipOfSize(3,10), //Destroyer
-               ShipSize.GetShipPositionForShipOfSize(3,10), //Submarine
-               ShipSize.GetShipPositionForShipOfSize(2,10) //Patrol Boatk
+               ShipStart.GenerateShipPosition(5,10), //Aircraft Carrier
+          ShipStart.GenerateShipPosition(4,10), //Battleship
+          ShipStart.GenerateShipPosition(3,10), //Destroyer
+          ShipStart.GenerateShipPosition(3,10), //Submarine
+          ShipStart.GenerateShipPosition(2,10) //Patrol Boatk
       };
         }
-        
+
 
         public IGridSquare SelectTarget()
         {
